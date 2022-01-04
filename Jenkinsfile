@@ -22,7 +22,7 @@ pipeline {
 				script
 				{
 					 bat "mvn clean package"
-            				 bat copy "C:\\Vikson\\devopstraining\\code\\Web\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\JenkinsWar.war"
+            				 bat "copy 'C:\\Vikson\\devopstraining\\code\\Web\\target\\*.war' 'C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\JenkinsWar.war'"
 				}
 			}
 		}
