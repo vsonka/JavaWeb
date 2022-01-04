@@ -22,7 +22,19 @@ pipeline {
 				script
 				{
 					 bat "mvn clean package"
-            				 bat "copy 'C:\\Vikson\\devopstraining\\code\\Web\\target\\*.war' 'C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\JenkinsWar.war'"
+				}
+			}
+		}
+		stage('Deploy')
+		{
+			steps
+			{
+				script
+				{
+				         bat "copy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\JavaWeb\\target\\*.war c:\\PROGRA~1\\ApacheSoftwareFoundation\\Tomcat85\\webapps\\JenkinsWar.war"
+                	   		 powershell '''
+						Restart-Service -Name Tomcat8
+					'''
 				}
 			}
 		}
