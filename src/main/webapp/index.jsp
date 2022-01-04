@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hey !!! We are good to deploy..</h2>
+<h2>Hey !!! Deployment Completed..</h2>
 </body>
 </html>
