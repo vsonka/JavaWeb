@@ -1,0 +1,89 @@
+pipeline {
+  agent { label 'Master' }
+  stages 
+	{
+		stage('Checkout') 
+		{
+			steps 
+			{
+				git branch: 'main',
+				credentialsId: '35798b44-1c58-4e53-aafd-318249a588cb',
+				url: 'https://github.com/vsonka/JavaWeb.git'
+				
+				stash includes: '**', name: 'builtSources'
+			}
+		}
+		stage('Build and Package')
+		{
+			steps
+			{
+				script
+				{
+					bat "mvn clean package"
+				}
+			}
+		}
+		stage('Docker Build') 
+		{
+			steps 
+			{
+			    script
+			    {
+			        bat "docker build -t vikson36/dockerpoc:${BUILD_NUMBER} ."
+			      
+			    }
+			}
+		}  
+		stage('Docker Push') 
+		{
+			steps 
+			{
+			    script
+			    {
+					withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
+					  bat "docker login -u vikson36 -p ${dockerpassword}"
+					  bat "docker push vikson36/dockerpoc:${BUILD_NUMBER}"
+					}
+			    }
+			}
+		}  
+		stage('Docker Pull On Dev') 
+		{	
+			agent { label 'dev' }
+			steps 
+			{	
+			    script
+			    {
+					withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
+					  sh 'docker login -u vikson36 -p ${dockerpassword}'
+					  sh 'docker image prune -a -f'
+					  sh 'docker pull vikson36/dockerpoc:${BUILD_NUMBER}'
+					}
+			    }
+			}
+		} 
+		stage('Docker Stop and Run') 
+		{	
+			agent { label 'dev' }
+			steps 
+			{	
+				unstash 'builtSources'
+			    script
+			    {
+			        //powershell '''
+			         //   'docker login -u $docker --password-stdin'
+			        //'''
+    			  // bat "docker push vikson36/dockerpoc:${BUILD_NUMBER}"
+					withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
+					  sh 'sudo docker login -u vikson36 -p ${dockerpassword}'
+					  sh 'docker container prune -f'
+					  sh 'sudo chmod 777 ${WORKSPACE}/dockerstop.sh'
+					  sh ('sudo ${WORKSPACE}/dockerstop.sh')
+					  sh 'sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:${BUILD_NUMBER}'
+					}
+			    }
+			}
+		} 
+	}
+	
+}
