@@ -1,0 +1,606 @@
+Script started on Tue 04 Jan 2022 10:00:30 PM UTC
+			    {
+			        //powershell '''
+			         //   'docker login -u $docker --password-stdin'
+			        //'''
+    			  // bat "docker push vikson36/dockerpoc:${BUILD_NUMBER}"
+					withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
+					  sh 'sudo docker login -u vikson36 -p ${dockerpassword}'
+					  sh 'sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:${BUILD_NUMBER}'
+					}
+			    }
+			}
+		} 
+	}
+	
+}
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[?1034h[root@coe-buildservers JavaWeb]#     {
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+>         //powershell '''
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+>          //   'docker login -u $docker --password-stdin'
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+>         //'''
+>     
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+>     
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+>       // bat "docker push vikson36/dockerpoc:${BUILD_NUMBER}"
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> 
+Dockerfile     dockerstop.sh  .git/          Jenkinsfile    pom.xml        .project       src/           target/        typescript     
+> withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
+bash: syntax error near unexpected token `[string'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]#   sh 'sudo docker login -u vikson36 -p ${dockerpassword}'
+sh: sudo docker login -u vikson36 -p ${dockerpassword}: No such file or directory
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]#   sh 'sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:${BUILD_NUMBER}'
+sh: sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:${BUILD_NUMBER}: No such file or directory
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# }
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]#     }
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# }
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# } 
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# }
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# 
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# }
+bash: syntax error near unexpected token `}'
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q)
+"docker kill" requires at least 1 argument.
+See 'docker kill --help'.
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+Kill one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q)[1P)a)
+Error response from daemon: Cannot kill container: CONTAINER: No such container: CONTAINER
+Error response from daemon: Cannot kill container: ID: No such container: ID
+Error response from daemon: Cannot kill container: IMAGE: No such container: IMAGE
+Error response from daemon: Cannot kill container: COMMAND: No such container: COMMAND
+Error response from daemon: Cannot kill container: CREATED: No such container: CREATED
+Error response from daemon: Cannot kill container: STATUS: No such container: STATUS
+Error response from daemon: Cannot kill container: PORTS: No such container: PORTS
+Error response from daemon: Cannot kill container: NAMES: No such container: NAMES
+Error response from daemon: Cannot kill container: 5571fafc8737: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 5: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (143): No such container: (143)
+Error response from daemon: Cannot kill container: 4: No such container: 4
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: zealous_hoover: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: 6056916a9b05: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: vigilant_driscoll: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: afdd08a999f3: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: gracious_mendeleev: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: ae62ea6cee57: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: --: No such container: --
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (1): No such container: (1)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: interesting_euler: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: dd2bc1436673: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+Error response from daemon: Cannot kill container: hello-world: No such container: hello-world
+Error response from daemon: Cannot kill container: "/hello": No such container: "/hello"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (0): No such container: (0)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: nice_torvalds: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -a)
+46fc1906704c
+recursing_liskov
+Error response from daemon: Cannot kill container: CONTAINER: No such container: CONTAINER
+Error response from daemon: Cannot kill container: ID: No such container: ID
+Error response from daemon: Cannot kill container: IMAGE: No such container: IMAGE
+Error response from daemon: Cannot kill container: COMMAND: No such container: COMMAND
+Error response from daemon: Cannot kill container: CREATED: No such container: CREATED
+Error response from daemon: Cannot kill container: STATUS: No such container: STATUS
+Error response from daemon: Cannot kill container: PORTS: No such container: PORTS
+Error response from daemon: Cannot kill container: NAMES: No such container: NAMES
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:78: No such container: vikson36/dockerpoc:78
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 52: No such container: 52
+Error response from daemon: Cannot kill container: seconds: No such container: seconds
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Up: No such container: Up
+Error response from daemon: Cannot kill container: 47: No such container: 47
+Error response from daemon: Cannot kill container: seconds: No such container: seconds
+Error response from daemon: Cannot kill container: 0.0.0.0:8081->8080/tcp,: No such container: 0.0.0.0:8081->8080/tcp,
+Error response from daemon: Cannot kill container: :::8081->8080/tcp: No such container: :::8081->8080/tcp
+Error response from daemon: Cannot kill container: 5571fafc8737: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 6: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (143): No such container: (143)
+Error response from daemon: Cannot kill container: 5: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: zealous_hoover: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: 6056916a9b05: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: vigilant_driscoll: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: afdd08a999f3: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: gracious_mendeleev: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: ae62ea6cee57: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: --: No such container: --
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (1): No such container: (1)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: interesting_euler: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: dd2bc1436673: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+Error response from daemon: Cannot kill container: hello-world: No such container: hello-world
+Error response from daemon: Cannot kill container: "/hello": No such container: "/hello"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (0): No such container: (0)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: nice_torvalds: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -a)\\\\[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker ps -a
+CONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS                           PORTS     NAMES
+46fc1906704c   vikson36/dockerpoc:78   "catalina.sh run"        About a minute ago   Exited (137) 17 seconds ago                recursing_liskov
+5571fafc8737   vikson36/dockerpoc:1    "catalina.sh run"        7 minutes ago        Exited (143) 5 minutes ago                 zealous_hoover
+6056916a9b05   vikson36/dockerpoc:1    "catalina.sh run"        About an hour ago    Exited (130) About an hour ago             vigilant_driscoll
+afdd08a999f3   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago         Exited (130) 28 hours ago                  gracious_mendeleev
+ae62ea6cee57   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago         Exited (1) 28 hours ago                    interesting_euler
+dd2bc1436673   hello-world             "/hello"                 28 hours ago         Exited (0) 28 hours ago                    nice_torvalds
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a
+CONTAINER ID   IMAGE                   COMMAND                  CREATED             STATUS                            PORTS     NAMES
+d51169433cdf   vikson36/dockerpoc:79   "catalina.sh run"        3 minutes ago       Exited (137) About a minute ago             inspiring_antonelli
+46fc1906704c   vikson36/dockerpoc:78   "catalina.sh run"        4 minutes ago       Exited (137) 3 minutes ago                  recursing_liskov
+5571fafc8737   vikson36/dockerpoc:1    "catalina.sh run"        10 minutes ago      Exited (143) 9 minutes ago                  zealous_hoover
+6056916a9b05   vikson36/dockerpoc:1    "catalina.sh run"        About an hour ago   Exited (130) About an hour ago              vigilant_driscoll
+afdd08a999f3   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (130) 28 hours ago                   gracious_mendeleev
+ae62ea6cee57   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (1) 28 hours ago                     interesting_euler
+dd2bc1436673   hello-world             "/hello"                 28 hours ago        Exited (0) 28 hours ago                     nice_torvalds
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a
+CONTAINER ID   IMAGE                   COMMAND                  CREATED             STATUS                           PORTS                                       NAMES
+a4594cc3dda5   vikson36/dockerpoc:81   "catalina.sh run"        2 minutes ago       Up 2 minutes                     0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   beautiful_pare
+d51169433cdf   vikson36/dockerpoc:79   "catalina.sh run"        6 minutes ago       Exited (137) 3 minutes ago                                                   inspiring_antonelli
+46fc1906704c   vikson36/dockerpoc:78   "catalina.sh run"        7 minutes ago       Exited (137) 6 minutes ago                                                   recursing_liskov
+5571fafc8737   vikson36/dockerpoc:1    "catalina.sh run"        13 minutes ago      Exited (143) 12 minutes ago                                                  zealous_hoover
+6056916a9b05   vikson36/dockerpoc:1    "catalina.sh run"        About an hour ago   Exited (130) About an hour ago                                               vigilant_driscoll
+afdd08a999f3   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (130) 28 hours ago                                                    gracious_mendeleev
+ae62ea6cee57   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (1) 28 hours ago                                                      interesting_euler
+dd2bc1436673   hello-world             "/hello"                 28 hours ago        Exited (0) 28 hours ago                                                      nice_torvalds
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q) 
+a4594cc3dda5
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q) [1P[1@a
+Error response from daemon: Cannot kill container: CONTAINER: No such container: CONTAINER
+Error response from daemon: Cannot kill container: ID: No such container: ID
+Error response from daemon: Cannot kill container: IMAGE: No such container: IMAGE
+Error response from daemon: Cannot kill container: COMMAND: No such container: COMMAND
+Error response from daemon: Cannot kill container: CREATED: No such container: CREATED
+Error response from daemon: Cannot kill container: STATUS: No such container: STATUS
+Error response from daemon: Cannot kill container: PORTS: No such container: PORTS
+Error response from daemon: Cannot kill container: NAMES: No such container: NAMES
+Error response from daemon: Cannot kill container: a4594cc3dda5: Container a4594cc3dda51bf2eb81fc98fc22e706d314f3fcb13a56f44c47e339a25cea24 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:81: No such container: vikson36/dockerpoc:81
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 3: No such container: 3
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (137): No such container: (137)
+Error response from daemon: Cannot kill container: 7: No such container: 7
+Error response from daemon: Cannot kill container: seconds: No such container: seconds
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: beautiful_pare: Container a4594cc3dda51bf2eb81fc98fc22e706d314f3fcb13a56f44c47e339a25cea24 is not running
+Error response from daemon: Cannot kill container: d51169433cdf: Container d51169433cdf5c28cd290086aaf217b7fa754b0ff5117d2c5d157586aaa583c8 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:79: No such container: vikson36/dockerpoc:79
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 7: No such container: 7
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (137): No such container: (137)
+Error response from daemon: Cannot kill container: 5: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: inspiring_antonelli: Container d51169433cdf5c28cd290086aaf217b7fa754b0ff5117d2c5d157586aaa583c8 is not running
+Error response from daemon: Cannot kill container: 46fc1906704c: Container 46fc1906704ca7c9c67bf1d1d65dfd3200e3e93e7dc88ddf8af94893fd4b6696 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:78: No such container: vikson36/dockerpoc:78
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 9: No such container: 9
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (137): No such container: (137)
+Error response from daemon: Cannot kill container: 8: No such container: 8
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: recursing_liskov: Container 46fc1906704ca7c9c67bf1d1d65dfd3200e3e93e7dc88ddf8af94893fd4b6696 is not running
+Error response from daemon: Cannot kill container: 5571fafc8737: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 15: No such container: 15
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (143): No such container: (143)
+Error response from daemon: Cannot kill container: 13: No such container: 13
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: zealous_hoover: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: 6056916a9b05: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:1: No such container: vikson36/dockerpoc:1
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: an: No such container: an
+Error response from daemon: Cannot kill container: hour: No such container: hour
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: vigilant_driscoll: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: afdd08a999f3: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (130): No such container: (130)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: gracious_mendeleev: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: ae62ea6cee57: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: jenkins:2.60.3: No such container: jenkins:2.60.3
+Error response from daemon: Cannot kill container: "/bin/tini: No such container: "/bin/tini
+Error response from daemon: Cannot kill container: --: No such container: --
+Error response from daemon: Cannot kill container: usr/l…": No such container: usr/l…"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (1): No such container: (1)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: interesting_euler: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: dd2bc1436673: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+Error response from daemon: Cannot kill container: hello-world: No such container: hello-world
+Error response from daemon: Cannot kill container: "/hello": No such container: "/hello"
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (0): No such container: (0)
+Error response from daemon: Cannot kill container: 28: No such container: 28
+Error response from daemon: Cannot kill container: hours: No such container: hours
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: nice_torvalds: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -a) [C[1P [1P [1P [K[1P [1P [K[1P [1P [1P [1P [1P [1P [1P [1P [K[1P [1P [1P [1P [K[1P [1P [1P [1P [1P [1P d o c k e r [C i m a g [1P [1P [1P [1P p s [C - a 
+CONTAINER ID   IMAGE                   COMMAND                  CREATED             STATUS                           PORTS     NAMES
+a4594cc3dda5   vikson36/dockerpoc:81   "catalina.sh run"        4 minutes ago       Exited (137) 30 seconds ago                beautiful_pare
+d51169433cdf   vikson36/dockerpoc:79   "catalina.sh run"        8 minutes ago       Exited (137) 5 minutes ago                 inspiring_antonelli
+46fc1906704c   vikson36/dockerpoc:78   "catalina.sh run"        9 minutes ago       Exited (137) 8 minutes ago                 recursing_liskov
+5571fafc8737   vikson36/dockerpoc:1    "catalina.sh run"        15 minutes ago      Exited (143) 14 minutes ago                zealous_hoover
+6056916a9b05   vikson36/dockerpoc:1    "catalina.sh run"        About an hour ago   Exited (130) About an hour ago             vigilant_driscoll
+afdd08a999f3   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (130) 28 hours ago                  gracious_mendeleev
+ae62ea6cee57   jenkins:2.60.3          "/bin/tini -- /usr/l…"   28 hours ago        Exited (1) 28 hours ago                    interesting_euler
+dd2bc1436673   hello-world             "/hello"                 28 hours ago        Exited (0) 28 hours ago                    nice_torvalds
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a [15@kill $(docker ps -a)[Cq[C[C
+"docker kill" requires at least 1 argument.
+See 'docker kill --help'.
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+Kill one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q) [1@ [1@-[1@a
+Error response from daemon: Cannot kill container: a4594cc3dda5: Container a4594cc3dda51bf2eb81fc98fc22e706d314f3fcb13a56f44c47e339a25cea24 is not running
+Error response from daemon: Cannot kill container: d51169433cdf: Container d51169433cdf5c28cd290086aaf217b7fa754b0ff5117d2c5d157586aaa583c8 is not running
+Error response from daemon: Cannot kill container: 46fc1906704c: Container 46fc1906704ca7c9c67bf1d1d65dfd3200e3e93e7dc88ddf8af94893fd4b6696 is not running
+Error response from daemon: Cannot kill container: 5571fafc8737: Container 5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262 is not running
+Error response from daemon: Cannot kill container: 6056916a9b05: Container 6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08 is not running
+Error response from daemon: Cannot kill container: afdd08a999f3: Container afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746 is not running
+Error response from daemon: Cannot kill container: ae62ea6cee57: Container ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19 is not running
+Error response from daemon: Cannot kill container: dd2bc1436673: Container dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525 is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker container prune -f
+Deleted Containers:
+a4594cc3dda51bf2eb81fc98fc22e706d314f3fcb13a56f44c47e339a25cea24
+d51169433cdf5c28cd290086aaf217b7fa754b0ff5117d2c5d157586aaa583c8
+46fc1906704ca7c9c67bf1d1d65dfd3200e3e93e7dc88ddf8af94893fd4b6696
+5571fafc87377ead5189e87bf041aa3ef039b006045b2e432bd52c2f435e4262
+6056916a9b05c96c61ec35c5f64f46c2f7cd4df030c00699ae85e190b9804c08
+afdd08a999f3090ca2497cb97c4c74f2e3f8cbbfb3887521a85d050e5022e746
+ae62ea6cee57427815edbc1e0e388a0b70a0269ee310646ef52d623dcc77ac19
+dd2bc1436673126a75d8a9ca387a8f92de902c1447fbf5d1477f1ffa21006525
+
+Total reclaimed space: 250.7kB
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker container prune -fkill $(docker ps -q -a) 
+"docker kill" requires at least 1 argument.
+See 'docker kill --help'.
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+Kill one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q -a) [1P[1P[1P
+Error response from daemon: Cannot kill container: CONTAINER: No such container: CONTAINER
+Error response from daemon: Cannot kill container: ID: No such container: ID
+Error response from daemon: Cannot kill container: IMAGE: No such container: IMAGE
+Error response from daemon: Cannot kill container: COMMAND: No such container: COMMAND
+Error response from daemon: Cannot kill container: CREATED: No such container: CREATED
+Error response from daemon: Cannot kill container: STATUS: No such container: STATUS
+Error response from daemon: Cannot kill container: PORTS: No such container: PORTS
+Error response from daemon: Cannot kill container: NAMES: No such container: NAMES
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -akill $(docker ps -a) [3@q -[C[C[C[6Pcontainer prune -f^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker images
+REPOSITORY           TAG       IMAGE ID       CREATED              SIZE
+vikson36/dockerpoc   82        8ef3dfbefe21   About a minute ago   147MB
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a
+CONTAINER ID   IMAGE                   COMMAND             CREATED          STATUS         PORTS                                       NAMES
+39f0dc502a22   vikson36/dockerpoc:83   "catalina.sh run"   55 seconds ago   Created                                                    upbeat_lumiere
+aa953c6f2939   vikson36/dockerpoc:82   "catalina.sh run"   2 minutes ago    Up 2 minutes   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   gallant_perlman
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# "catalina.sh^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q)
+aa953c6f2939
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q)
+"docker kill" requires at least 1 argument.
+See 'docker kill --help'.
+
+Usage:  docker kill [OPTIONS] CONTAINER [CONTAINER...]
+
+Kill one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -q)[1P)a)
+Error response from daemon: Cannot kill container: CONTAINER: No such container: CONTAINER
+Error response from daemon: Cannot kill container: ID: No such container: ID
+Error response from daemon: Cannot kill container: IMAGE: No such container: IMAGE
+Error response from daemon: Cannot kill container: COMMAND: No such container: COMMAND
+Error response from daemon: Cannot kill container: CREATED: No such container: CREATED
+Error response from daemon: Cannot kill container: STATUS: No such container: STATUS
+Error response from daemon: Cannot kill container: PORTS: No such container: PORTS
+Error response from daemon: Cannot kill container: NAMES: No such container: NAMES
+Error response from daemon: Cannot kill container: 39f0dc502a22: Container 39f0dc502a225d5b221c0dfa085429d42d2088c0a76a4a08914d095889a03826 is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:83: No such container: vikson36/dockerpoc:83
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: About: No such container: About
+Error response from daemon: Cannot kill container: a: Container aa953c6f293976e4e7610d5b84df6727693f350f635cf49e3b93068575bd076a is not running
+Error response from daemon: Cannot kill container: minute: No such container: minute
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Created: No such container: Created
+Error response from daemon: Cannot kill container: upbeat_lumiere: Container 39f0dc502a225d5b221c0dfa085429d42d2088c0a76a4a08914d095889a03826 is not running
+Error response from daemon: Cannot kill container: aa953c6f2939: Container aa953c6f293976e4e7610d5b84df6727693f350f635cf49e3b93068575bd076a is not running
+Error response from daemon: Cannot kill container: vikson36/dockerpoc:82: No such container: vikson36/dockerpoc:82
+Error response from daemon: Cannot kill container: "catalina.sh: No such container: "catalina.sh
+Error response from daemon: Cannot kill container: run": No such container: run"
+Error response from daemon: Cannot kill container: 3: Container 39f0dc502a225d5b221c0dfa085429d42d2088c0a76a4a08914d095889a03826 is not running
+Error response from daemon: Cannot kill container: minutes: No such container: minutes
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: Exited: No such container: Exited
+Error response from daemon: Cannot kill container: (137): No such container: (137)
+Error response from daemon: Cannot kill container: 16: No such container: 16
+Error response from daemon: Cannot kill container: seconds: No such container: seconds
+Error response from daemon: Cannot kill container: ago: No such container: ago
+Error response from daemon: Cannot kill container: gallant_perlman: Container aa953c6f293976e4e7610d5b84df6727693f350f635cf49e3b93068575bd076a is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -a) )-)q)
+Error response from daemon: Cannot kill container: 39f0dc502a22: Container 39f0dc502a225d5b221c0dfa085429d42d2088c0a76a4a08914d095889a03826 is not running
+Error response from daemon: Cannot kill container: aa953c6f2939: Container aa953c6f293976e4e7610d5b84df6727693f350f635cf49e3b93068575bd076a is not running
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker kill $(docker ps -a -q)[1P[1P[1P[1P[1@s[1@t[1@o[1@p
+39f0dc502a22
+aa953c6f2939
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker stop $(docker ps -a -q)
+39f0dc502a22
+aa953c6f2939
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ls
+Dockerfile  dockerstop.sh  Jenkinsfile  pom.xml  [0m[38;5;27msrc[0m  [38;5;27mtarget[0m  typescript
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# lsdocker stop $(docker ps -a -q)kill[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)[Kq)ps -a[Kimages[1Pps -akill $(docker ps -a) [3@q -[C[C[C[6Pcontainer prune -fkill $(docker ps -q -a) [3P[C[Cps -a [K
+CONTAINER ID   IMAGE                   COMMAND             CREATED         STATUS                        PORTS     NAMES
+39f0dc502a22   vikson36/dockerpoc:83   "catalina.sh run"   2 minutes ago   Created                                 upbeat_lumiere
+aa953c6f2939   vikson36/dockerpoc:82   "catalina.sh run"   3 minutes ago   Exited (137) 48 seconds ago             gallant_perlman
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:83
+408114f5e902c1f30bf4a9bf4a72a18ef6c96118708b6e2668e5680fbb5960b5
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# sudo docker container run --detach --publish 8081:8080 vikson36/dockerpoc:83[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker ps -a [Kls[Kdocker stop $(docker ps -a -q)
+408114f5e902
+39f0dc502a22
+aa953c6f2939
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker stop $(docker ps -a -q)
+408114f5e902
+39f0dc502a22
+aa953c6f2939
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -1
+unknown shorthand flag: '1' in -1
+See 'docker ps --help'.
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -1[Ka
+CONTAINER ID   IMAGE                   COMMAND             CREATED              STATUS                        PORTS     NAMES
+408114f5e902   vikson36/dockerpoc:83   "catalina.sh run"   About a minute ago   Exited (143) 54 seconds ago             confident_keller
+39f0dc502a22   vikson36/dockerpoc:83   "catalina.sh run"   3 minutes ago        Created                                 upbeat_lumiere
+aa953c6f2939   vikson36/dockerpoc:82   "catalina.sh run"   5 minutes ago        Exited (137) 2 minutes ago              gallant_perlman
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a -q
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a -q | docker stop
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker ps -a -q | docker stop^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ^C
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# docker stop "$(docker ps -a -q)"[K[C[1P
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ls
+Dockerfile  dockerstop.sh  Jenkinsfile  pom.xml  [0m[38;5;27msrc[0m  [38;5;27mtarget[0m  typescript
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ./doc[K[K[K[K[K./docket[Kr[K[K[K[K[K[K[K[Kls
+Dockerfile  dockerstop.sh  Jenkinsfile  pom.xml  [0m[38;5;27msrc[0m  [38;5;27mtarget[0m  typescript
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ls -ltr
+total 80
+drwxr-xr-x. 4 root root    68 Jan  4 21:44 [0m[38;5;27mtarget[0m
+drwxr-xr-x. 3 root root    18 Jan  4 21:44 [38;5;27msrc[0m
+-rw-r--r--. 1 root root  1030 Jan  4 21:44 pom.xml
+-rw-r--r--. 1 root root   696 Jan  4 21:44 Jenkinsfile
+-rw-r--r--. 1 root root   119 Jan  4 21:44 Dockerfile
+-rw-r--r--. 1 root root    85 Jan  4 21:44 dockerstop.sh
+-rw-r--r--. 1 root root 65536 Jan  4 22:29 typescript
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# chmod _r[K[K-R 777 dockerstop.sh 
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# chmod -R 777 dockerstop.sh ls -ltr[K
+total 80
+drwxr-xr-x. 4 root root    68 Jan  4 21:44 [0m[38;5;27mtarget[0m
+drwxr-xr-x. 3 root root    18 Jan  4 21:44 [38;5;27msrc[0m
+-rw-r--r--. 1 root root  1030 Jan  4 21:44 pom.xml
+-rw-r--r--. 1 root root   696 Jan  4 21:44 Jenkinsfile
+-rw-r--r--. 1 root root   119 Jan  4 21:44 Dockerfile
+-rwxrwxrwx. 1 root root    85 Jan  4 21:44 [38;5;34mdockerstop.sh[0m
+-rw-r--r--. 1 root root 65536 Jan  4 22:29 typescript
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ls -ltr[K[K[K[K[K[K[K./dockerstop.sh 
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# vi co[K[Kdockerstop.sh 
+[?1049h[?1h=[1;50r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[50;1H"dockerstop.sh" 1L, 85C[1;1Hsudo docker ps -a | grep vikson36/dockerpoc |  awk '{print $1}'  | xargs docker stop
+[94m~                                                                                                                                                                                               [3;1H~                                                                                                                                                                                               [4;1H~                                                                                                                                                                                               [5;1H~                                                                                                                                                                                               [6;1H~                                                                                                                                                                                               [7;1H~                                                                                                                                                                                               [8;1H~                                                                                                                                                                                               [9;1H~                                                                                                                                                                                               [10;1H~                                                                                                                                                                                               [11;1H~                                                                                                                                                                                               [12;1H~                                                                                                                                                                                               [13;1H~                                                                                                                                                                                               [14;1H~                                                                                                                                                                                               [15;1H~                                                                                                                                                                                               [16;1H~                                                                                                                                                                                               [17;1H~                                                                                                                                                                                               [18;1H~                                                                                                                                                                                               [19;1H~                                                                                                                                                                                               [20;1H~                                                                                                                                                                                               [21;1H~                                                                                                                                                                                               [22;1H~                                                                                                                                                                                               [23;1H~                                                                                                                                                                                               [24;1H~                                                                                                                                                                                               [25;1H~                                                                                                                                                                                               [26;1H~                                                                                                                                                                                               [27;1H~                                                                                                                                                                                               [28;1H~                                                                                                                                                                                               [29;1H~                                                                                                                                                                                               [30;1H~                                                                                                                                                                                               [31;1H~                                                                                                                                                                                               [32;1H~                                                                                                                                                                                               [33;1H~                                                                                                                                                                                               [34;1H~                                                                                                                                                                                               [35;1H~                                                                                                                                                                                               [36;1H~                                                                                                                                                                                               [37;1H~                                                                                                                                                                                               [38;1H~                                                                                                                                                                                               [39;1H~                                                                                                                                                                                               [40;1H~                                                                                                                                                                                               [41;1H~                                                                                                                                                                                               [42;1H~                                                                                                                                                                                               [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[?25l[m[50;1H[1m-- INSERT --[m[50;13H[K[1;1H[?12l[?25hsudo docker ps -a | grep vikson36/dockerpoc |  awk '{print $1}'  | xargs docker stop[?25l [?12l[?25h[?25l>[?12l[?25h[?25l [?12l[?25h[?25l/[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25lv[?12l[?25h[?25l/[?12l[?25h[?25ln[?12l[?25h[?25lu[?12l[?25h[?25ll[?12l[?25h[?25ll[?12l[?25h[50;1H[K[1;96H[?25l[?12l[?25h[?25l[50;1H:[?12l[?25hwq![?25l"dockerstop.sh" 1L, 97C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# vi dockerstop.sh [1P./[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ./dockerstop.shvi dockerstop.sh 
+[?1049h[?1h=[1;50r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[50;1H"dockerstop.sh" 1L, 97C[1;1Hsudo docker ps -a | grep vikson36/dockerpoc |  awk '{print $1}'  | xargs docker stop > /dev/null
+[94m~                                                                                                                                                                                               [3;1H~                                                                                                                                                                                               [4;1H~                                                                                                                                                                                               [5;1H~                                                                                                                                                                                               [6;1H~                                                                                                                                                                                               [7;1H~                                                                                                                                                                                               [8;1H~                                                                                                                                                                                               [9;1H~                                                                                                                                                                                               [10;1H~                                                                                                                                                                                               [11;1H~                                                                                                                                                                                               [12;1H~                                                                                                                                                                                               [13;1H~                                                                                                                                                                                               [14;1H~                                                                                                                                                                                               [15;1H~                                                                                                                                                                                               [16;1H~                                                                                                                                                                                               [17;1H~                                                                                                                                                                                               [18;1H~                                                                                                                                                                                               [19;1H~                                                                                                                                                                                               [20;1H~                                                                                                                                                                                               [21;1H~                                                                                                                                                                                               [22;1H~                                                                                                                                                                                               [23;1H~                                                                                                                                                                                               [24;1H~                                                                                                                                                                                               [25;1H~                                                                                                                                                                                               [26;1H~                                                                                                                                                                                               [27;1H~                                                                                                                                                                                               [28;1H~                                                                                                                                                                                               [29;1H~                                                                                                                                                                                               [30;1H~                                                                                                                                                                                               [31;1H~                                                                                                                                                                                               [32;1H~                                                                                                                                                                                               [33;1H~                                                                                                                                                                                               [34;1H~                                                                                                                                                                                               [35;1H~                                                                                                                                                                                               [36;1H~                                                                                                                                                                                               [37;1H~                                                                                                                                                                                               [38;1H~                                                                                                                                                                                               [39;1H~                                                                                                                                                                                               [40;1H~                                                                                                                                                                                               [41;1H~                                                                                                                                                                                               [42;1H~                                                                                                                                                                                               [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[msudo docker ps -a | grep vikson36/dockerpoc |  awk '{print $1}'  | xargs docker stop > /dev/nul[?25l[50;1H[1m-- INSERT --[m[50;13H[K[1;96H[?12l[?25hl[?25l[2;1H[K[2;1H[?12l[?25h[?25le[?12l[?25h[?25lx[?12l[?25h[?25li[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25l0[?12l[?25h[50;1H[K[2;6H[?25l[?12l[?25h[?25l[50;1H:[?12l[?25hwq![?25l"dockerstop.sh" 2L, 104C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# vi dockerstop.sh [2P./dockerstop.sh
+"docker stop" requires at least 1 argument.
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# ./dockerstop.shvi dockerstop.sh 
+[?1049h[?1h=[1;50r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[50;1H"dockerstop.sh" 2L, 104C[1;1Hsudo docker ps -a | grep vikson36/dockerpoc |  awk '{print $1}'  | xargs docker stop > /dev/null
+exit 0
+[94m~                                                                                                                                                                                               [4;1H~                                                                                                                                                                                               [5;1H~                                                                                                                                                                                               [6;1H~                                                                                                                                                                                               [7;1H~                                                                                                                                                                                               [8;1H~                                                                                                                                                                                               [9;1H~                                                                                                                                                                                               [10;1H~                                                                                                                                                                                               [11;1H~                                                                                                                                                                                               [12;1H~                                                                                                                                                                                               [13;1H~                                                                                                                                                                                               [14;1H~                                                                                                                                                                                               [15;1H~                                                                                                                                                                                               [16;1H~                                                                                                                                                                                               [17;1H~                                                                                                                                                                                               [18;1H~                                                                                                                                                                                               [19;1H~                                                                                                                                                                                               [20;1H~                                                                                                                                                                                               [21;1H~                                                                                                                                                                                               [22;1H~                                                                                                                                                                                               [23;1H~                                                                                                                                                                                               [24;1H~                                                                                                                                                                                               [25;1H~                                                                                                                                                                                               [26;1H~                                                                                                                                                                                               [27;1H~                                                                                                                                                                                               [28;1H~                                                                                                                                                                                               [29;1H~                                                                                                                                                                                               [30;1H~                                                                                                                                                                                               [31;1H~                                                                                                                                                                                               [32;1H~                                                                                                                                                                                               [33;1H~                                                                                                                                                                                               [34;1H~                                                                                                                                                                                               [35;1H~                                                                                                                                                                                               [36;1H~                                                                                                                                                                                               [37;1H~                                                                                                                                                                                               [38;1H~                                                                                                                                                                                               [39;1H~                                                                                                                                                                                               [40;1H~                                                                                                                                                                                               [41;1H~                                                                                                                                                                                               [42;1H~                                                                                                                                                                                               [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[?25l[m[50;1H[1m-- INSERT --[m[50;13H[K[1;1H[?12l[?25h
+exit 0[?25l[2;6H[K[2;6H[?12l[?25h[?25l[?12l[?25h[?25l[2;4H[K[2;4H[?12l[?25h[?25l[2;3H[K[2;3H[?12l[?25h[?25l[2;2H[K[2;2H[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[94m~                                                                                                                                                                                               [1;97H[?12l[?25h[?25l[m [?12l[?25h[?25l2[?12l[?25h[?25l>[?12l[?25h[?25l&[?12l[?25h[?25l1[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25lr'[?12l[?25h[?25le'[?12l[?25h[?25lm'[?12l[?25h[?25lo'[?12l[?25h[?25lv'[?12l[?25h[?25le'[?12l[?25h[?25ld'[?12l[?25h[?25l '[?12l[?25h[?25lc'[?12l[?25h[?25lo'[?12l[?25h[?25ln'[?12l[?25h[?25lt'[?12l[?25h[?25la'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25le'[?12l[?25h[?25lr'[?12l[?25h'[?25l [?12l[?25h[?25l|[?12l[?25h[?25l|[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25ln'[?12l[?25h[?25lo'[?12l[?25h[?25lt'[?12l[?25h[?25lh'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25lg'[?12l[?25h[?25l '[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25l '[?12l[?25h[?25ls'[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25lp'[?12l[?25hd[?25ld container' || echo 'nothing to stop'[1;152H[K[1;114H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;151H[K[1;113H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;150H[K[1;112H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;149H[K[1;111H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;148H[K[1;110H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;147H[K[1;109H[?12l[?25h[?25lsd container' || echo 'nothing to stop'[1;110H[?12l[?25h[?25ltd container' || echo 'nothing to stop'[1;111H[?12l[?25h[?25lod container' || echo 'nothing to stop'[1;112H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;113H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;114H[?12l[?25h[?25led container' || echo 'nothing to stop'[1;115H[?12l[?25h[?25ldd container' || echo 'nothing to stop'[1;116H[?12l[?25hd[?25l container' || echo 'nothing to                                         [38;1H~                                                                                                                                                                                               [39;1H~                                                                                                                                                                                               [40;1H~                                                                                                                                                                                               [41;1H~                                                                                                                                                                                               [42;1H~                                                                                                                                                                                               [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[?25l[m[50;1H[1m-- INSERT --[m[50;13H[K[1;1H[?12l[?25h
+exit 0[?25l[2;6H[K[2;6H[?12l[?25h[?25l[?12l[?25h[?25l[2;4H[K[2;4H[?12l[?25h[?25l[2;3H[K[2;3H[?12l[?25h[?25l[2;2H[K[2;2H[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[94m~                                                                                                                                                                                               [1;97H[?12l[?25h[?25l[m [?12l[?25h[?25l2[?12l[?25h[?25l>[?12l[?25h[?25l&[?12l[?25h[?25l1[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25lr'[?12l[?25h[?25le'[?12l[?25h[?25lm'[?12l[?25h[?25lo'[?12l[?25h[?25lv'[?12l[?25h[?25le'[?12l[?25h[?25ld'[?12l[?25h[?25l '[?12l[?25h[?25lc'[?12l[?25h[?25lo'[?12l[?25h[?25ln'[?12l[?25h[?25lt'[?12l[?25h[?25la'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25le'[?12l[?25h[?25lr'[?12l[?25h'[?25l [?12l[?25h[?25l|[?12l[?25h[?25l|[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25ln'[?12l[?25h[?25lo'[?12l[?25h[?25lt'[?12l[?25h[?25lh'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25lg'[?12l[?25h[?25l '[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25l '[?12l[?25h[?25ls'[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25lp'[?12l[?25hd                                                                                                                     [25;1H~                                                                                                                                                                                               [26;1H~                                                                                                                                                                                               [27;1H~                                                                                                                                                                                               [28;1H~                                                                                                                                                                                               [29;1H~                                                                                                                                                                                               [30;1H~                                                                                                                                                                                               [31;1H~                                                                                                                                                                                               [32;1H~                                                                                                                                                                                               [33;1H~                                                                                                                                                                                               [34;1H~                                                                                                                                                                                               [35;1H~                                                                                                                                                                                               [36;1H~                                                                                                                                                                                               [37;1H~                                                                                                                                                                                               [38;1H~                                                                                                                                                                                               [39;1H~                                                                                                                                                                                               [40;1H~                                                                                                                                                                                               [41;1H~                                                                                                                                                                                               [42;1H~                                                                                                                                                                                               [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[?25l[m[50;1H[1m-- INSERT --[m[50;13H[K[1;1H[?12l[?25h
+exit 0[?25l[2;6H[K[2;6H[?12l[?25h[?25l[?12l[?25h[?25l[2;4H[K[2;4H[?12l[?25h[?25l[2;3H[K[2;3H[?12l[?25h[?25l[2;2H[K[2;2H[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[94m~                                                                                                                                                                                               [1;97H[?12l[?25h[?25l[m [?12l[?25h[?25l2[?12l[?25h[?25l>[?12l[?25h[?25l&[?12l[?25h[?25l1[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25lr'[?12l[?25h[?25le'[?12l[?25h[?25lm'[?12l[?25h[?25lo'[?12l[?25h[?25lv'[?12l[?25h[?25le'[?12l[?25h[?25ld'[?12l[?25h[?25l '[?12l[?25h[?25lc'[?12l[?25h[?25lo'[?12l[?25h[?25ln'[?12l[?25h[?25lt'[?12l[?25h[?25la'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25le'[?12l[?25h[?25lr'[?12l[?25h'[?25l [?12l[?25h[?25l|[?12l[?25h[?25l|[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25ln'[?12l[?25h[?25lo'[?12l[?25h[?25lt'[?12l[?25h[?25lh'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25lg'[?12l[?25h[?25l '[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25l '[?12l[?25h[?25ls'[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25lp'[?12l[?25hd[?25ld container' || echo 'nothing to stop'[1;152H[K[1;114H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;151H[K[1;113H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;150H[K[1;112H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;149H[K[1;111H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;148H[K[1;110H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;147H[K[1;109H[?12l[?25h[?25lsd container' || echo 'nothing to stop'[1;110H[?12l[?25h[?25ltd container' || echo 'nothing to stop'[1;111H[?12l[?25h[?25lod container' || echo 'nothing to stop'[1;112H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;113H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;114H[?12l[?25h[?25led container' || echo 'nothing to stop'[1;115H[?12l[?25h[?25ldd container' || echo 'nothing to stop'[1;116H[?12l[?25hd[?25l container' || echo 'nothing to stop'[1;153H[K[1;116H[?12l[?25h[50;1H[K[1;115H[?25l[?12l[?25h[?25l[50;1H:[?12l[?25hwq![?25l"dockerstop.sh" 1L, 153C written
+[?1l>[?12l[?25h[?1049l]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# vi dockerstop.sh [2P./dockerstop.sh
+nothing to stop
+]0;vagrant@coe-buildservers:/opt/test/JavaWeb[root@coe-buildservers JavaWeb]# git pull
+remote: Enumerating objects: 12, done.[K
+remote: Counting objects                                                                                                                                                                                        [43;1H~                                                                                                                                                                                               [44;1H~                                                                                                                                                                                               [45;1H~                                                                                                                                                                                               [46;1H~                                                                                                                                                                                               [47;1H~                                                                                                                                                                                               [48;1H~                                                                                                                                                                                               [49;1H~                                                                                                                                                                                               [1;1H[?12l[?25h[?25l[m[50;1H[1m-- INSERT --[m[50;13H[K[1;1H[?12l[?25h
+exit 0[?25l[2;6H[K[2;6H[?12l[?25h[?25l[?12l[?25h[?25l[2;4H[K[2;4H[?12l[?25h[?25l[2;3H[K[2;3H[?12l[?25h[?25l[2;2H[K[2;2H[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[94m~                                                                                                                                                                                               [1;97H[?12l[?25h[?25l[m [?12l[?25h[?25l2[?12l[?25h[?25l>[?12l[?25h[?25l&[?12l[?25h[?25l1[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25lr'[?12l[?25h[?25le'[?12l[?25h[?25lm'[?12l[?25h[?25lo'[?12l[?25h[?25lv'[?12l[?25h[?25le'[?12l[?25h[?25ld'[?12l[?25h[?25l '[?12l[?25h[?25lc'[?12l[?25h[?25lo'[?12l[?25h[?25ln'[?12l[?25h[?25lt'[?12l[?25h[?25la'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25le'[?12l[?25h[?25lr'[?12l[?25h'[?25l [?12l[?25h[?25l|[?12l[?25h[?25l|[?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25l'[?12l[?25h[?25l'[?12l[?25h[?25ln'[?12l[?25h[?25lo'[?12l[?25h[?25lt'[?12l[?25h[?25lh'[?12l[?25h[?25li'[?12l[?25h[?25ln'[?12l[?25h[?25lg'[?12l[?25h[?25l '[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25l '[?12l[?25h[?25ls'[?12l[?25h[?25lt'[?12l[?25h[?25lo'[?12l[?25h[?25lp'[?12l[?25hd[?25ld container' || echo 'nothing to stop'[1;152H[K[1;114H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;151H[K[1;113H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;150H[K[1;112H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;149H[K[1;111H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;148H[K[1;110H[?12l[?25h[?25ld container' || echo 'nothing to stop'[1;147H[K[1;109H[?12l[?25h[?25lsd container' || echo 'nothing to stop'[1;110H[?12l[?25h[?25ltd container' || echo 'nothing to stop'[1;111H[?12l[?25h[?25lod container' || echo 'nothing to stop'[1;112H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;113H[?12l[?25h[?25lpd container' || echo 'nothing to stop'[1;114H[?12l[?25h[?25led container' || echo 'nothing to stop'[1;115H[?12l[?25h[?2
