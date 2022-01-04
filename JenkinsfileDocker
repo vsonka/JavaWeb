@@ -50,9 +50,9 @@ pipeline {
 		stage('Docker Pull On Dev') 
 		{	
 			agent { label 'dev' }
-			unstash 'builtSources'
 			steps 
 			{	
+			    unstash 'builtSources'
 			    script
 			    {
 					withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpassword')]) {
@@ -66,10 +66,9 @@ pipeline {
 		stage('Docker Stop and Run') 
 		{	
 			agent { label 'dev' }
-			unstash 'builtSources'
 			steps 
 			{	
-				unstash 'builtSources'
+			    unstash 'builtSources'
 			    script
 			    {
 			        //powershell '''
