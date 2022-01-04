@@ -1,2 +1,5 @@
-FROM httpd:2.4
-COPY ./index.html /usr/local/apache2/htdocs/
+FROM tomcat:8.0-alpine
+LABEL maintainer=”deepak@softwareyoga.com”
+ADD ./target/JenkinsWar.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
